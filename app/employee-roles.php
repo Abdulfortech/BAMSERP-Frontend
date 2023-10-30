@@ -40,94 +40,96 @@
       </ul>
     <!-- Header -->
     
-    <div class="row">
-      <!-- <div class="col-md-12">
-        <div class="card">
-          <div class="card-body">
-            <h1 class="text-center">Add Role</h1>
-            <form  method="POST" action="process.php" enctype="multipart/form-data">
-              <input class="form-control" type="text" value="<?php echo $editorid; ?>" name="editor" hidden>
-              <div class="form-group text-left">
-                <div class="row">
-                    <div class="col-md-12">
-                      <label for="optiona">Title </label>
-                      <input class="form-control" type="text" value="" name="fname" required>
-                    </div>
-                    <div class="col-md-12">
-                      <label for="optiona">Status</label>
-                      <select class="form-control" name="status" required>
-                          <option>Active</option>
-                          <option>Inactive</option>
-                      </select>
-                    </div>
+      <div class="row">
+        <!-- <div class="col-md-12">
+          <div class="card">
+            <div class="card-body">
+              <h1 class="text-center">Add Role</h1>
+              <form  method="POST" action="process.php" enctype="multipart/form-data">
+                <input class="form-control" type="text" value="<?php echo $editorid; ?>" name="editor" hidden>
+                <div class="form-group text-left">
+                  <div class="row">
+                      <div class="col-md-12">
+                        <label for="optiona">Title </label>
+                        <input class="form-control" type="text" value="" name="fname" required>
+                      </div>
+                      <div class="col-md-12">
+                        <label for="optiona">Status</label>
+                        <select class="form-control" name="status" required>
+                            <option>Active</option>
+                            <option>Inactive</option>
+                        </select>
+                      </div>
+                  </div>
                 </div>
-              </div>
-              <center>
-                <input type="submit" name="editProfile" class="btn btn-primary" value="Update">
-              </center>
-            </form>
-          </div>
-        </div>
-      </div> -->
-      <div class="col-md-12">
-        <!-- change profile picture -->
-        <div class="card p-2">
-            <DIV class="card-header justify-content-between">
-                <h1 class="float-left">Employees</h1>
-                <button class="btn btn-primary float-right">Add Role</button>
-            </DIV>
-            <div class="table-responsive">
-                <table class="table table-binvoiceed table-striped" id="example2">
-                    <thead class="thead-dark">
-                    <tr>
-                        <th >S/N</th>
-                        <th >Name</th>
-                        <th >Employee ID</th>
-                        <th >Role</th>
-                        <th >Department</th>
-                        <th >Status</th>
-                        <th >Action</th>
-                    </tr>
-                    </thead>
-                    <tbody class="list">
-                        <tr>
-                        <td>1</td>
-                        <td>CEO</td>
-                        <td>CTO</td>
-                        <td>CMO</td>
-                        <td>DBSSVDF</td>
-                        <td><span class="badge badge-pill badge-success">Active</span></td>
-                        <td class="text-right">
-                            <div class="dropdown">
-                            <a class="btn btn-sm btn-icon-only text-light" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <i class="fas fa-ellipsis-v"></i>
-                            </a>
-                            <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
-                                <a href="employee-single.php?employee=<?php echo $row['employee_id'];?>" class="dropdown-item">View</a>
-                                <a href="employee-edit.php?employee=<?php echo $row['employee_id'];?>" class="dropdown-item">Edit</a>
-                            </div>
-                            </div>
-                        </td>
-                        </tr>
-                    </tbody>
-                    <tfoot class="thead-light">
-                    <tr>
-                        <th >S/N</th>
-                        <th >Name</th>
-                        <th >Employee ID</th>
-                        <th >Role</th>
-                        <th >Department</th>
-                        <th >Status</th>
-                        <th >Action</th>
-                    </tr>
-                    </tfoot>
-                </table>
+                <center>
+                  <input type="submit" name="editProfile" class="btn btn-primary" value="Update">
+                </center>
+              </form>
             </div>
+          </div>
+        </div> -->
+        <div class="col-md-12">
+          <!-- change profile picture -->
+          <div class="card p-2">
+              <DIV class="card-header justify-content-between">
+                  <h1 class="float-left">Employees</h1>
+                  <button class="btn btn-primary float-right" type="button" data-toggle="modal" data-target="#addEmployeeRole">Add Role</button>
+              </DIV>
+              <div class="table-responsive">
+                  <table class="table table-binvoiceed table-striped" id="example2">
+                      <thead class="thead-dark">
+                      <tr>
+                          <th >S/N</th>
+                          <th >Name</th>
+                          <th >Employee ID</th>
+                          <th >Role</th>
+                          <th >Department</th>
+                          <th >Status</th>
+                          <th >Action</th>
+                      </tr>
+                      </thead>
+                      <tbody class="list">
+                          <tr>
+                          <td>1</td>
+                          <td>CEO</td>
+                          <td>CTO</td>
+                          <td>CMO</td>
+                          <td>DBSSVDF</td>
+                          <td><span class="badge badge-pill badge-success">Active</span></td>
+                          <td class="text-right">
+                              <div class="dropdown">
+                              <a class="btn btn-sm btn-icon-only text-light" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                  <i class="fas fa-ellipsis-v"></i>
+                              </a>
+                              <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
+                                  <a href="employee-single.php?employee=<?php echo $row['employee_id'];?>" class="dropdown-item">View</a>
+                                  <a href="employee-edit.php?employee=<?php echo $row['employee_id'];?>" class="dropdown-item">Edit</a>
+                              </div>
+                              </div>
+                          </td>
+                          </tr>
+                      </tbody>
+                      <tfoot class="thead-light">
+                      <tr>
+                          <th >S/N</th>
+                          <th >Name</th>
+                          <th >Employee ID</th>
+                          <th >Role</th>
+                          <th >Department</th>
+                          <th >Status</th>
+                          <th >Action</th>
+                      </tr>
+                      </tfoot>
+                  </table>
+              </div>
+          </div>
+        
         </div>
-      
       </div>
-    </div>
       
+      <!-- Footer -->
+      <?php include '../components/auth/footer.php'; include '../components/auth/modals.php';?>
   </div>
   <!-- Argon Scripts -->
   <!-- Core -->
